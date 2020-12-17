@@ -30,7 +30,7 @@ resource "aws_subnet" "terraform" {
 }
 resource "aws_security_group" "terraform" {
 name = "allow-all-sg"
-vpc_id = aws_vpc.terraform.id}
+vpc_id = aws_vpc.terraform.id
 ingress {
     cidr_blocks = [
       "0.0.0.0/0"
@@ -54,4 +54,8 @@ resource "aws_instance" "harsha" {
     key_name = "Harsha"
     subnet_id = aws_subnet.terraform.id
     security_groups = ["${aws_security_group.terraform.id}"]
+
+    tags = {
+        Name = terraform
+    }
 }
