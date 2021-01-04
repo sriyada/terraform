@@ -1,9 +1,6 @@
 pipeline {
     agent any
-    environment {
-        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWSforTerraform',
-                        ACCESS_KEY: 'ACCESS_KEY', SECRET_KEY: 'SECRET_KEY']]) { }
-    }
+    
     tools {
         terraform 'Terraform'
     }
@@ -17,12 +14,18 @@ pipeline {
         stage('Terraform') {
             steps {
                 script {
+                    withCredentials([[
+        $class: 'AmazonWebServicesCredentialsBinding', 
+        accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
+        secretKeyVariable: 'AWS_SECRET_ACCESS_KEY',
+        credentialsId: "AWSforTerraform"
+    ]]) {
                  sh 'which terraform'
                  sh 'terraform init'
                  sh 'terrafrom plan'
                  sh 'pwd'
                  sh 'ls -al'
-                    
+    }
                 }
             }
         }
