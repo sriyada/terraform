@@ -22,7 +22,7 @@ pipeline {
     ]]) {
                  sh 'which terraform'
                  sh 'terraform init'
-                 sh 'terrafrom plan'
+                 sh 'terraform plan'
                  sh 'pwd'
                  sh 'ls -al'
     }
