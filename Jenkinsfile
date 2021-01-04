@@ -30,7 +30,7 @@ pipeline {
                 }
             }
         }
-        stage (terraform destroy) {
+        stage ('terraformdestroy') {
             steps {
                 script {
                     withCredentials([[
