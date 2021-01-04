@@ -21,7 +21,7 @@ pipeline {
         credentialsId: "AWSforTerraform"
     ]]) {
                  sh 'which terraform'
-                 //sh 'terraform init'
+                 sh 'terraform init'
                  sh 'terraform plan'
                  //sh 'terraform apply --auto-approve'
                  //sh 'git init'
