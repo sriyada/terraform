@@ -22,7 +22,7 @@ pipeline {
     ]]) {
                  sh 'which terraform'
                  //sh 'terraform init'
-                 //sh 'terraform plan'
+                 sh 'terraform plan'
                  //sh 'terraform apply --auto-approve'
                  //sh 'git init'
                  sh 'git status'
