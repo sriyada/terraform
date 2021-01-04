@@ -23,19 +23,23 @@ pipeline {
                  sh 'which terraform'
                  //sh 'terraform init'
                  sh 'terraform plan'
-                 sh 'terraform apply --auto-approve'
-                 sh 'git config --global user.email "sri.yada9@gmail.com"'
-                 sh 'git config --global user.name "harsha"'
+                 //sh 'terraform apply --auto-approve'
                  //sh 'git init'
                  sh 'git status'
                  sh 'git add terraform.tfstate'
                  sh 'git commit -m "git push"'
-                 sh 'git push origin HEAD:master'
+                 sh 'git push origin master'
                  sh 'pwd'
                  sh 'ls -al'
     }
                 }
             }
+        }
+    }
+
+post { 
+        always { 
+            cleanWs()
         }
     }
 }
