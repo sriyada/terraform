@@ -6,6 +6,7 @@ pipeline {
                 checkout scm
                 echo 'Hello, Maven'
                 sh 'pwd'
+                sh 'ls -al'
             }
         }
         stage('Example Test') {
