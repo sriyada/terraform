@@ -24,6 +24,7 @@ pipeline {
                  sh 'terraform init'
                  sh 'terraform plan'
                  //sh 'terraform apply --auto-approve'
+                 sh 'git init'
                  sh 'pwd'
                  sh 'ls -al'
     }
