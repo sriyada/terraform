@@ -5,6 +5,7 @@ pipeline {
             steps {
                 checkout scm
                 echo 'Hello, Maven'
+                sh 'which terraform'
                 sh 'terraform init'
                 sh 'terrafrom plan'
                 sh 'pwd'
