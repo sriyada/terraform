@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        terraform 'Terraform'
+    }
     stages {
         stage('Example Build') {
             steps {
