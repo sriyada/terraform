@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Example Build') {
             steps {
+                checkout scm
                 echo 'Hello, Maven'
-                sh 'terraform plan'
+                sh 'pwd'
             }
         }
         stage('Example Test') {
