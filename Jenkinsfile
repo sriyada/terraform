@@ -24,6 +24,8 @@ pipeline {
                  //sh 'terraform init'
                  sh 'terraform plan'
                  sh 'terraform apply --auto-approve'
+                 sh 'git config --global user.email "you@example.com"'
+                 sh 'git config --global user.name "Your Name"'
                  //sh 'git init'
                  sh 'git status'
                  sh 'git add terraform.tfstate'
