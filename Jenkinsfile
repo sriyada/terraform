@@ -24,6 +24,7 @@ pipeline {
                  sh 'terraform init'
                  sh 'terraform plan'
                  sh 'terraform apply --auto-approve'
+                 sh 'git init'
                  sh 'git add .'
                  sh 'git commit -m "${env.BUILD_NUMBER}"'
                  sh 'git push'
