@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Example Build') {
             steps {
-                echo "Java"
+                echo 'Hello, Maven'
+            }
+        }
+        stage('Example Test') {
+            steps {
+                echo 'Hello, JDK'
             }
         }
     }
