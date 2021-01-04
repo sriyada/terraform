@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-        AWS_ACCESS_KEY_ID     = credentials('AWSforTerraform')
-        AWS_SECRET_ACCESS_KEY = credentials('AWSforTerraform')
-    }
     tools {
         terraform 'Terraform'
     }
@@ -12,16 +8,19 @@ pipeline {
             steps {
                 checkout scm
                 echo 'Hello, Maven'
-                sh 'which terraform'
-                sh 'terraform init'
-                sh 'terrafrom plan'
-                sh 'pwd'
-                sh 'ls -al'
             }
         }
-        stage('Example Test') {
+        stage('Terraform') {
             steps {
-                echo 'Hello'
+                script {
+                    withAWS(credentials: 'AWSforTerraform') {
+                 sh 'which terraform'
+                 sh 'terraform init'
+                 sh 'terrafrom plan'
+                 sh 'pwd'
+                 sh 'ls -al'
+                    }
+                }
             }
         }
     }
