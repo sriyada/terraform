@@ -1,8 +1,10 @@
 pipeline {
     agent any
+    stages {
         stage('build') {
             steps {
-                echo "Harsha atest pipeline"
+                echo "Java"
             }
         }
     }
+}
