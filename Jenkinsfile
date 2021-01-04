@@ -1,9 +1,8 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages {
+    agent any
         stage('build') {
             steps {
-                sh 'mvn --version'
+                echo "Harsha atest pipeline"
             }
         }
     }
