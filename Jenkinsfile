@@ -27,7 +27,7 @@ pipeline {
                  //sh 'git init'
                  sh 'git status'
                  sh 'git add terraform.tfstate'
-                 sh 'git commit -m"${env.BUILD_NUMBER}"'
+                 sh "git commit -m "${env.BUILD_NUMBER}""
                  sh 'git push'
                  sh 'pwd'
                  sh 'ls -al'
