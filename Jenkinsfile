@@ -30,7 +30,7 @@ pipeline {
                  sh 'git status'
                  sh 'git add terraform.tfstate'
                  sh 'git commit -m "git push"'
-                 sh 'git push'
+                 sh 'git push origin HEAD:master'
                  sh 'pwd'
                  sh 'ls -al'
     }
