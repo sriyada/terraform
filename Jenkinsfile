@@ -23,23 +23,9 @@ pipeline {
                  sh 'which terraform'
                  sh 'terraform init'
                  sh 'terraform plan'
-                 sh 'terraform apply --auto-approve'
+                 //sh 'terraform apply --auto-approve'
                  sh 'pwd'
                  sh 'ls -al'
-    }
-                }
-            }
-        }
-        stage ('terraformdestroy') {
-            steps {
-                script {
-                    withCredentials([[
-        $class: 'AmazonWebServicesCredentialsBinding', 
-        accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
-        secretKeyVariable: 'AWS_SECRET_ACCESS_KEY',
-        credentialsId: "AWSforTerraform"
-    ]]) {
-        sh "terraform destroy --auto-approve"
     }
                 }
             }
