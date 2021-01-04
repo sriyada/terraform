@@ -23,6 +23,7 @@ pipeline {
                  sh 'which terraform'
                  sh 'terraform init'
                  sh 'terraform plan'
+                 sh 'terraform applt --auto-approve'
                  sh 'pwd'
                  sh 'ls -al'
     }
