@@ -24,11 +24,6 @@ pipeline {
                  sh 'terraform init'
                  sh 'terraform plan'
                  sh 'terraform apply --auto-approve'
-                 //sh 'git init'
-                 //sh 'git status'
-                 //sh 'git add terraform.tfstate'
-                 //sh 'git commit -m "git push"'
-                 //sh 'git push origin master'
                  sh 'pwd'
                  sh 'ls -al'
     }
