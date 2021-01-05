@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {
-     buildDiscarder(logRotator(numToKeepStr: '2'))
+     buildDiscarder(logRotator(numToKeepStr: '9'))
      ansiColor('xterm')
      }
     tools {
