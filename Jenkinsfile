@@ -1,3 +1,4 @@
+MAX_BUILDS = 5
 pipeline {
     agent any
     
