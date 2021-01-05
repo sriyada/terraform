@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                   sh 'git status'
-                  sh 'git add terraform.tfstate'
+                  sh 'git add .'
                   sh 'git commit -m "git push"'
                   withCredentials([usernamePassword(credentialsId: 'gitpush',
                   usernameVariable: 'Username',
