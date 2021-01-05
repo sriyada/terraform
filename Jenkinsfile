@@ -37,7 +37,7 @@ pipeline {
         }
         stage ('gitpush'){
             steps {
-                scrpit {
+                script {
                   sh 'git status'
                   sh 'git add terraform.tfstate'
                   sh 'git commit -m "git push"'
