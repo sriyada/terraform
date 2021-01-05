@@ -33,21 +33,6 @@ pipeline {
                 }
             }
         }
-        stage ('gitpush'){
-            steps {
-                script {
-                  sh 'git status'
-                  sh 'git add .'
-                  sh 'git commit -m "git push"'
-                //   withCredentials([usernamePassword(credentialsId: 'gitpush',
-                //   usernameVariable: 'Username',
-                //   passwordVariable: 'Password')]){
-                //       sh 'git push origin master'
-                //  }
-                }
-    
-}
-        }
     }
 
 post { 

@@ -1,4 +1,12 @@
 terraform {
+  backend "s3" {
+    bucket = "terra-remote"
+    key    = "dev/terra/terraform.state"
+    region = "us-east-1"
+  }
+}
+
+terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
