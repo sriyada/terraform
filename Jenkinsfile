@@ -44,7 +44,7 @@ pipeline {
                   withCredentials([usernamePassword(credentialsId: 'gitpush',
                   usernameVariable: 'Username',
                   passwordVariable: 'Password')]){
-                      sh("git push http://github.com/sriyada/terraform")
+                      sh 'git push origin master'
                  }
                 }
     
