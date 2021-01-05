@@ -1,7 +1,8 @@
-MAX_BUILDS = 5
 pipeline {
     agent any
-    
+    options {
+     buildDiscarder(logRotator(numToKeepStr: '2'))
+ }
     tools {
         terraform 'Terraform'
     }
