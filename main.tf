@@ -25,7 +25,7 @@ resource "aws_vpc" "terraform" {
   enable_dns_hostnames = true
   enable_dns_support = true
   tags = {
-      Name = "terraform"
+      Name = "terraform12"
   }
 }
 resource "aws_subnet" "terraform" {
@@ -33,7 +33,7 @@ resource "aws_subnet" "terraform" {
     cidr_block = "10.5.0.0/16"
 
     tags = {
-        Name = "TerraformSubnet"
+        Name = "TerraformSubnet12"
     }
 }
 
@@ -46,6 +46,6 @@ resource "aws_instance" "harsha" {
     #security_groups = aws_security_group.terraform.id
 
     tags = {
-        Name = "terraform"
+        Name = "terraform12"
     }
 }
