@@ -2,7 +2,7 @@ pipeline {
     agent any
     options {
      buildDiscarder(logRotator(numToKeepStr: '2'))
-     ansiColor('xterm')
+     //ansiColor('xterm')
      }
     tools {
         terraform 'Terraform'
