@@ -10,7 +10,7 @@ build-job:
 build-job1:
   tags:
     - Macos
-  stage: test1
+  stage: build
   script:
     - terraform apply --auto-approve
     - terraform destroy --auto-approve
@@ -19,7 +19,7 @@ build-job1:
 build-job2:
   tags:
     - Macos
-  stage: test2
+  stage: build
   script:
     - terraform apply --auto-approve
     - terraform destroy --auto-approve
