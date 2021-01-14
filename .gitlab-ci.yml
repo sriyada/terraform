@@ -5,3 +5,7 @@ build-job:
   script:
     - echo "Hello, world"
     - pwd
+    - terraform init
+    - terraform plan
+    - terraform aplly --auto-approve
+    - terraform destroy --auto-approve
