@@ -7,5 +7,5 @@ build-job:
     - pwd
     - terraform init
     - terraform plan
-    - terraform aplly -auto-approve
-    - terraform destroy -auto-approve
+    - terraform apply --auto-approve
+    - terraform destroy --auto-approve
