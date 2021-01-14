@@ -9,4 +9,4 @@ build-job:
     - terraform plan
     - terraform apply --auto-approve
     - terraform destroy --auto-approve
-  while: manual
+  when: manual
