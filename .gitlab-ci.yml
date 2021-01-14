@@ -4,4 +4,4 @@ build-job:
   stage: build
   script:
     - echo "Hello, world"
-    - sh "terraform init"
+    - sh "pwd"
