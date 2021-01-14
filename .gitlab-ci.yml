@@ -5,22 +5,14 @@ build-job:
   script:
     - echo "Hello, world"
     - pwd
-    - terraform init
+
 
 build-job1:
   tags:
     - Macos
   stage: build
   script:
-    - terraform apply --auto-approve
-    - terraform destroy --auto-approve
-  when: manual
-
-build-job2:
-  tags:
-    - Macos
-  stage: build
-  script:
+    - terraform init
     - terraform apply --auto-approve
     - terraform destroy --auto-approve
   when: manual
