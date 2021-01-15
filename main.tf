@@ -28,16 +28,26 @@ resource "aws_vpc" "terraform" {
       Name = "terraform12"
   }
 }
+resource "aws_subnet" "terraform1" {
+  vpc_id = aws_vpc.terraform.id
+  cidr_block = "10.5.2.0/16"
+  map_public_ip_on_launch = “true” 
+  availability_zone = “us-east-1b”
+
+  tags = {
+        Name = "TerraformSubnet22"
+    }
+}
 resource "aws_subnet" "terraform" {
     vpc_id = aws_vpc.terraform.id
-    cidr_block = "10.5.0.0/16"
+    cidr_block = "10.5.1.0/16"
+    map_public_ip_on_launch = “true” 
+    availability_zone = “us-east-1a”
 
     tags = {
         Name = "TerraformSubnet12"
     }
 }
-
-
 resource "aws_instance" "harsha" {
     ami   = "ami-04d29b6f966df1537"
     instance_type  = "t2.micro"
