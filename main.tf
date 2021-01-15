@@ -1,9 +1,9 @@
 terraform {
   backend "artifactory" {
-    username = "ARTIFACTORY_USER"
-    password = "ARTIFACTORY_PASS"
-    url      = "ARTIFACTORY_URL"
-    repo     = "MAVEN_REPO_KEY"
+    username = "admin"
+    password = "Yaadagani$1991"
+    url      = "http://192.168.0.42:8082/"
+    repo     = "add-test-gitlab"
     subpath  = "terraform"
   }
 }
