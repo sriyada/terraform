@@ -1,10 +1,8 @@
 terraform {
-  backend "artifactory" {
-    username = "$ARTIFACTORY_USER"
-    password = "$ARTIFACTORY_PASS"
-    url      = "$ARTIFACTORY_URL"
-    repo     = "$MAVEN_REPO_KEY"
-    subpath  = "terraform"
+  backend "s3" {
+    bucket = "terra-remote"
+    key    = "dev/terra/terraform.state"
+    region = "us-east-1"
   }
 }
 
