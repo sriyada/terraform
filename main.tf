@@ -2,7 +2,7 @@ terraform {
   backend "artifactory" {
     username = "admin"
     password = "Yaadagani$1991"
-    url      = "http://192.168.0.42:8082/"
+    url      = "http://192.168.0.42:8082/artifactory/"
     repo     = "add-test-gitlab"
     subpath  = "terraform"
   }
