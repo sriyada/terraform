@@ -12,6 +12,7 @@ pipeline {
             steps {
                 checkout scm
                 echo 'Hello, Maven'
+                echo 'Hello AWS'
             }
         }
         stage('Terraform') {
