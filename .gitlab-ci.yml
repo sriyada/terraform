@@ -1,6 +1,6 @@
 build-job:
   tags:
-    - Macos
+    - Testing
   stage: build
   script:
     - echo "Hello, world"
@@ -9,7 +9,7 @@ build-job:
 
 build-job1:
   tags:
-    - Macos
+    - Testing
   stage: build
   script:
     - terraform init
